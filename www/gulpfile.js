@@ -37,7 +37,7 @@ gulp.task('style', function(){
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sass())
     .pipe(autoprefixer())
-    .pipe(uncss({
+    /*.pipe(uncss({
         html: ['*.html'],
         ignore: [
             ".fade",".fade.in",".collapse",".collapse.in",".collapsing",".alert-danger",".open",
@@ -53,7 +53,7 @@ gulp.task('style', function(){
             /\.afix/,
             /\.glyphicon/
        ]
-    }))
+    }))*/
     .pipe(minifyCSS())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest('./dist/css'));
@@ -77,33 +77,32 @@ gulp.task('customJS', function(){
 
 gulp.task('materializeJS', function(){
     gulp.src([
-      'assets/js/materialize/animation.js',
-      'assets/js/materialize/button.js',
-      'assets/js/materialize/cards.js',
-      'assets/js/materialize/character_counter.js',
-      'assets/js/materialize/collapsible.js',
-      'assets/js/materialize/date_picker/picker.date.js',
-      'assets/js/materialize/date_picker/picker.js',
-      'assets/js/materialize/dropdown.js',
-      'assets/js/materialize/dropdown.js',
-      'assets/js/materialize/forms.js',
       'assets/js/materialize/global.js',
-      'assets/js/materialize/hammer.min.js',
       'assets/js/materialize/jquery.easing.1.3.js',
+      'assets/js/materialize/hammer.min.js',
+      'assets/js/materialize/velocity.min.js',
+      'assets/js/materialize/animation.js',
+      'assets/js/materialize/collapsible.js',
+      'assets/js/materialize/dropdown.js',
       'assets/js/materialize/leanModal.js',
       'assets/js/materialize/materialbox.js',
       'assets/js/materialize/parallax.js',
-      'assets/js/materialize/pushpin.js',
-      'assets/js/materialize/scrollFire.js',
-      'assets/js/materialize/scrollspy.js',
-      'assets/js/materialize/sideNav.js',
-      'assets/js/materialize/slider.js',
       'assets/js/materialize/tabs.js',
-      'assets/js/materialize/toasts.js',
       'assets/js/materialize/tooltip.js',
+      'assets/js/materialize/waves.js',
+      'assets/js/materialize/toasts.js',
+      'assets/js/materialize/sideNav.js',
+      'assets/js/materialize/scrollspy.js',
+      'assets/js/materialize/forms.js',
+      'assets/js/materialize/character_counter.js',
+      'assets/js/materialize/slider.js',
+      'assets/js/materialize/cards.js',
+      'assets/js/materialize/pushpin.js',
+      'assets/js/materialize/button.js',
       'assets/js/materialize/transitions.js',
-      'assets/js/materialize/velocity.min.js',
-      'assets/js/materialize/waves.js'
+      'assets/js/materialize/scrollFire.js',
+      'assets/js/materialize/date_picker/picker.js',
+      'assets/js/materialize/date_picker/picker.date.js'
     ])
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(concate("materialize.js"))

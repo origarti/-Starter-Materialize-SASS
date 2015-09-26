@@ -1,4 +1,4 @@
-# MaterializeCSS + SASS + GulpJS (**~15%**)
+# MaterializeCSS + SASS + GulpJS (**~45%**)
 ![#](https://github.com/origarti/-Starter-Materialize-SASS/blob/master/www/dist/pic/header-materialize-sass.jpg?raw=true)
 # Bienvenue !
 
