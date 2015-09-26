@@ -29,7 +29,7 @@ Ce projet est une base de travail créee par **[Gaëtan Ruiz](http://origarti.fr
 
 Pour cela, il utilise les technologies suivantes :
 
-*   [MaterializeCSS](http://materializecss.com/)
+*   [MaterializeCSS v0.97.1](http://materializecss.com/)
 *   [SASS (SCSS)](http://sass-lang.com/)
 *   [jQuery (1.9.1)](https://jquery.com/)
 *   [GulpJS](http://gulpjs.com/)
