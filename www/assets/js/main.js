@@ -4,7 +4,7 @@ $(document).ready(function(){
         $('html').removeClass('no-js');
         $('html').removeAttr('class');
         console.log('Prêt à démarrer !');
-        
+        $('.modal-trigger').leanModal();
     }
 
     init();

@@ -113,11 +113,11 @@ gulp.task('materializeJS', function(){
 
 gulp.task('script',['materializeJS', 'customJS'],  function(){
     gulp.src([
-        'dist/js/materialize.min.js',
+        //'dist/js/materialize.min.js',
         'dist/js/custom.min.js'
     ])
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-    .pipe(concate("main.js"))
+    //.pipe(concate("main.js"))
     .pipe(rename("main.min.js"))
     .pipe(gulp.dest('dist/js/'));
 });
